@@ -10,7 +10,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 
 public class FileImageLoader implements ImageLoader{
-    private static String[] ImageExtensions = new String []{"jpg","png","bmp"};
+    private final static String[] ImageExtensions = new String []{"jpg","png","bmp"};
     private final File[] files;
     public FileImageLoader(String folder) {
         this.files= new File(folder).listFiles(withImageExtension());
